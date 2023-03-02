@@ -18,6 +18,15 @@ class Game {
     setInterval(() => {
         this.obstaclessArr.forEach((obstacle) => {
         obstacle.moveDown();
+
+        if(
+            this.player.positionX < obstacle.positionX + obstacle.width &&
+            this.player.positionX + this.player.width > obstacle.positionX &&
+            this.player.positionY < obstacle.positionY + obstacle.height &&
+            this.player.height + this.player.positionY > obstacle.positionY
+        ){
+            console.log("game over")
+        }
       });
     }, 30);
   }
@@ -37,7 +46,12 @@ class Player {
   constructor() {
     this.positionX = 0;
     this.positionY = 0;
+    this.width = 20;
+    this.height = 10;
     this.playerElm = document.getElementById("player");
+
+    this.playerElm.style.width = this.width + "vw";
+    this.playerElm.style.height = this.height + "vh";
   }
   moveLeft() {
     this.positionX--; //if to manage not to go out the div(-)
@@ -53,6 +67,8 @@ class Obstacle {
   constructor() {
     this.positionX = 50;
     this.positionY = 100;
+    this.width = 20;
+    this.height = 10;
     this.obstacleElm = null;
 
     this.createDomElement();
@@ -61,6 +77,8 @@ class Obstacle {
     this.obstacleElm = document.createElement(`div`);
 
     this.obstacleElm.className = "obstacle";
+    this.obstacleElm.style.width = this.width + "vw";
+    this.obstacleElm.style.height = this.height + "vh";
     this.obstacleElm.style.left = this.positionX + "vw";
 
     const boardElm = document.getElementById("board");
