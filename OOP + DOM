@@ -1,0 +1,24 @@
+OOP + DOM
+
+Milestone 1 = display player + user can move the player left/right
+
+    [ ]    initial code
+        - files (html, css, js)
+        -create repo + initial code
+
+    [ ]    -Game class ?
+
+    [ ]    -Player class
+        -positionX
+        -positionY
+        -move() / dom manipulation
+
+   []  -event listeneres
+
+Milestone 2 = obstacles appearing in the UI + obstacles move + we detect if there's a collision
+(note: for this milestone, it's ok if obstacles appear at the same position)
+
+
+Milestone 3: make the game more intresting & fix bugs
+    -random position for obstacles
+    -
