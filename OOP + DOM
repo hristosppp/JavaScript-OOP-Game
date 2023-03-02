@@ -2,7 +2,7 @@ OOP + DOM
 
 Milestone 1 = display player + user can move the player left/right
 
-    [ ]    initial code
+    [x]    initial code
         - files (html, css, js)
         -create repo + initial code
 
@@ -11,7 +11,9 @@ Milestone 1 = display player + user can move the player left/right
     [ ]    -Player class
         -positionX
         -positionY
-        -move() / dom manipulation
+        -move() / 
+        
+    [ ] dom manipulation
 
    []  -event listeneres
 
